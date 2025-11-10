@@ -38,8 +38,10 @@ public class Main {
                         System.out.println("Можете выбрать любую систему налогообложения");
                     } else if (taxEarningsMinusSpendings == 0 || taxEarnings < taxEarningsMinusSpendings) {
                         if (taxEarningsMinusSpendings == 0) {
-                            System.out.println("Мы советуем вам УСН доходы, так как расходы превышают доходы");
-                            System.out.println("Ваш налог составит: " + taxEarnings);
+                            System.out.println("Мы советуем вам УСН доходы минус расходы");
+                            System.out.println("Ваш налог составит: " + taxEarningsMinusSpendings);
+                            System.out.println("Налог на другой системе: " + taxEarnings);
+                            System.out.println("Экономия: " + (taxEarnings - taxEarningsMinusSpendings));
                         } else {
                             System.out.println("Мы советуем вам УСН доходы");
                             System.out.println("Ваш налог составит: " + taxEarnings);
